@@ -14,9 +14,15 @@
 /*
  记录 开始时候的图片 就是为填充时候图片
  **/
-@property (nonatomic,strong) UIImage *baseimage;
+@property (nonatomic,copy) UIImage *baseimage;
 /*
 当前需要填充的颜色
  **/
 @property (nonatomic,strong) UIColor  *newcolor;
+
+/*
+ 缩放比例
+ **/
+@property (nonatomic,assign) CGFloat scaleNum;
+
 @end

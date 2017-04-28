@@ -14,10 +14,17 @@
 
 #import "MyimageView.h"
 #import "LinkedListStack.h"
-
+#import "AFNetworkSessionClient.h"
 @interface MyimageView()
-
 @property (nonatomic,assign) CGImageRef cgimage;
+
+/*
+ 
+ **/
+@property (nonatomic,assign) CGFloat currentScale;
+
+
+
 @end
 @implementation MyimageView
 -(instancetype)initWithFrame:(CGRect)frame
@@ -25,7 +32,8 @@
     if ([super initWithFrame:frame]) {
         
         self.userInteractionEnabled = YES;
-    
+        self.multipleTouchEnabled = YES;
+        
     }
     return self;
     
@@ -33,49 +41,44 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
     CGPoint tpoint = [[[event allTouches] anyObject] locationInView:self];
-    
-    [self floodFillFromPoint:tpoint withColor:self.newcolor];
-    
-    
-    
+    NSArray * touchesArr=[[event allTouches] allObjects];
+    if (touchesArr.count == 1) {
+        [self floodFillFromPoint:tpoint withColor:self.newcolor];
+    }
+}
+// 计算俩点之间的距离
+-(double)distance:(CGPoint)p1 point:(CGPoint)p2
+{
+    double distance=sqrt(pow(p1.x-p2.x,2)+pow(p1.y-p2.y,2));
+    return distance;
 }
 - (void ) floodFillFromPoint:(CGPoint)startPoint withColor:(UIColor *)newColor
 {
     
     
-    CGFloat scaleNum = [UIScreen mainScreen].scale;
     // 颜色差异度
     int tolerance = 10;
     BOOL  antiAlias = NO;
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    
     CGImageRef imageRef = [self.image CGImage];
     NSUInteger width = CGImageGetWidth(self.image.CGImage);
     NSUInteger height = CGImageGetHeight(self.image.CGImage);
     // 装换坐标 实际坐标转换成像素坐标
-    size_t www =   startPoint.x * scaleNum;
-    size_t hhh =   startPoint.y *scaleNum;
+    size_t www =   startPoint.x * _scaleNum;
+    size_t hhh =   startPoint.y *_scaleNum;
     
     startPoint = CGPointMake(www, hhh);
+    unsigned char* imageData = malloc(width * height * 4) ;
+    memset(imageData, 0, width * height * 4);
     
-    unsigned char *imageData = malloc(height * width * 4);
-    unsigned char *imageData1 = malloc(height * width * 4);
-
+    NSLog(@"--------------%p",imageData);
+    
     NSUInteger bytesPerPixel = CGImageGetBitsPerPixel(imageRef) / 8;
     NSUInteger bytesPerRow = CGImageGetBytesPerRow(imageRef);
     NSUInteger bitsPerComponent = CGImageGetBitsPerComponent(imageRef);
     CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(imageRef);
 
-    // 判断 点击的是否是边框
-    unsigned int blackcolor = getColorCodeFromUIColor([UIColor whiteColor],bitmapInfo&kCGBitmapByteOrderMask);
-    unsigned int touchcolor = getColorCodeFromUIColor([self colorAtPixel:startPoint],bitmapInfo&kCGBitmapByteOrderMask);
-    if (compareColor(blackcolor, touchcolor, 10)) {
-        
-    }else{
-        return;
-    }
     if (kCGImageAlphaLast == (uint32_t)bitmapInfo || kCGImageAlphaFirst == (uint32_t)bitmapInfo) {
         bitmapInfo = (uint32_t)kCGImageAlphaPremultipliedLast;
     }
@@ -88,38 +91,33 @@
                                                  colorSpace,
                                                  bitmapInfo);
     CGColorSpaceRelease(colorSpace);
-    
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
     
-    // 开启base 图片上下文
-    CGImageRef baseimageRef = [self.baseimage CGImage];
-    NSUInteger basewidth = CGImageGetWidth(self.baseimage.CGImage);
-    NSUInteger basseheight = CGImageGetHeight(self.baseimage.CGImage);
-    NSUInteger basebytesPerRow = CGImageGetBytesPerRow(baseimageRef);
-    NSUInteger basebitsPerComponent = CGImageGetBitsPerComponent(baseimageRef);
-    CGBitmapInfo basebitmapInfo = CGImageGetBitmapInfo(baseimageRef);
     
-    CGContextRef context1 = CGBitmapContextCreate(imageData1,
-                                                 basewidth,
-                                                 basseheight,
-                                                 basebitsPerComponent,
-                                                 basebytesPerRow,
-                                                 colorSpace,
-                                                 basebitmapInfo);
-
-    
-    CGContextDrawImage(context1, CGRectMake(0, 0, width, height), baseimageRef);
-
     
     //获取点击 像素点的颜色
     unsigned int byteIndex = (bytesPerRow * roundf(startPoint.y)) + roundf(startPoint.x) * bytesPerPixel;
     unsigned int ocolor = getColorCode(byteIndex, imageData);
     
-    if (compareColor(ocolor, 0, 0)) {
+    
+    
+    // 判断 点击的是否是边框
+    unsigned int blackcolor = getColorCodeFromUIColor([UIColor blackColor],bitmapInfo&kCGBitmapByteOrderMask);
+    if (compareColor(blackcolor, ocolor, 5)) {
+        
+        
         return;
     }
+//    if (compareColor(ocolor, 0, 5)) {
+//        
+//        
+//        
+//        return;
+//    }
     // 如果新的颜色和旧的颜色 相同直接返回
     if (compareColor(ocolor, getColorCodeFromUIColor(newColor,bitmapInfo&kCGBitmapByteOrderMask), 10)) {
+        
+        
         return;
     }
     // 新的颜色  把新的颜色转换成容易储存的形式
@@ -152,12 +150,7 @@
     
     unsigned int ncolor = (newRed << 24) | (newGreen << 16) | (newBlue << 8) | newAlpha;
     
-    /*
-     We are using stack to store point.
-     Stack is implemented by LinkList.
-     To incress speed I have used NSMutableData insted of NSMutableArray.
-     */
-    
+
     LinkedListStack *points = [[LinkedListStack alloc] initWithCapacity:500 incrementSize:500 andMultiplier:(int)height];
     LinkedListStack *antiAliasingPoints = [[LinkedListStack alloc] initWithCapacity:500 incrementSize:500 andMultiplier:(int)height ];
     
@@ -167,14 +160,8 @@
     
     [points pushFrontX:x andY:y];
     
-    /*
-     This algorithem is prety simple though it llook odd in Objective C syntex.
-     You can read hole artical for knowledge.
-     If you are familer with flood fill than got to Scanline Floodfill Algorithm With Stack (floodFillScanlineStack)
-     */
     
     unsigned int color;
-    unsigned int basecolor;
 
     BOOL spanLeft,spanRight;
     
@@ -183,7 +170,6 @@
         byteIndex = (bytesPerRow * roundf(y)) + roundf(x) * bytesPerPixel;
         
         color = getColorCode(byteIndex, imageData);
-        basecolor = getColorCode(byteIndex, imageData1);
 
         
         //获取点击 像素点的颜色
@@ -195,12 +181,12 @@
             if(y >= 0)
             {
                 byteIndex = (bytesPerRow * roundf(y)) + roundf(x) * bytesPerPixel;
-                basecolor = getColorCode(byteIndex, imageData1);
                 color = getColorCode(byteIndex, imageData);
             }
         }
         
-//         Add the top most point on the antialiasing list
+
+        // 将顶部的种子点 放入栈中
         if(y >= 0 && !compareColor(ocolor, color, 0))
         {
             [antiAliasingPoints pushFrontX:x andY:y];
@@ -213,7 +199,6 @@
         byteIndex = (bytesPerRow * roundf(y)) + roundf(x) * bytesPerPixel;
         
         color = getColorCode(byteIndex, imageData);
-        basecolor = getColorCode(byteIndex, imageData1);
 
         while (y < height && compareColor(ocolor, color, tolerance))
         {
@@ -228,7 +213,6 @@
                 byteIndex = (bytesPerRow * roundf(y)) + roundf(x - 1) * bytesPerPixel;
                 
                 color = getColorCode(byteIndex, imageData);
-                basecolor = getColorCode(byteIndex, imageData1);
 
                 if(!spanLeft && x > 0 && compareColor(ocolor, color, tolerance))
                 {
@@ -251,7 +235,6 @@
             if(x < width - 1)
             {
                 byteIndex = (bytesPerRow * roundf(y)) + roundf(x + 1) * bytesPerPixel;;
-                basecolor = getColorCode(byteIndex, imageData1);
 
                 color = getColorCode(byteIndex, imageData);
                 
@@ -278,7 +261,6 @@
             if(y < height)
             {
                 byteIndex = (bytesPerRow * roundf(y)) + roundf(x) * bytesPerPixel;
-                basecolor = getColorCode(byteIndex, imageData1);
 
                 color = getColorCode(byteIndex, imageData);
             }
@@ -288,16 +270,12 @@
         {
             byteIndex = (bytesPerRow * roundf(y)) + roundf(x) * bytesPerPixel;
             color = getColorCode(byteIndex, imageData);
-            basecolor = getColorCode(byteIndex, imageData1);
 
-            // Add the bottom point on the antialiasing list
             if (!compareColor(ocolor, color, 0))
                 [antiAliasingPoints pushFrontX:x andY:y];
         }
     }
     
-    // For each point marked
-    // perform antialiasing on the same pixel, plus the top,left,bottom and right pixel
     unsigned int antialiasColor = getColorCodeFromUIColor(newColor,bitmapInfo&kCGBitmapByteOrderMask );
     int red1   = ((0xff000000 & antialiasColor) >> 24);
     int green1 = ((0x00ff0000 & antialiasColor) >> 16);
@@ -308,7 +286,6 @@
     {
         byteIndex = (bytesPerRow * roundf(y)) + roundf(x) * bytesPerPixel;
         color = getColorCode(byteIndex, imageData);
-        basecolor = getColorCode(byteIndex, imageData1);
 
         if (!compareColor(ncolor, color, 0))
         {
@@ -337,7 +314,6 @@
         {
             byteIndex = (bytesPerRow * roundf(y)) + roundf(x - 1) * bytesPerPixel;
             color = getColorCode(byteIndex, imageData);
-            basecolor = getColorCode(byteIndex, imageData1);
 
             if (!compareColor(ncolor, color, 0))
             {
@@ -363,7 +339,6 @@
         {
             byteIndex = (bytesPerRow * roundf(y)) + roundf(x + 1) * bytesPerPixel;
             color = getColorCode(byteIndex, imageData);
-            basecolor = getColorCode(byteIndex, imageData1);
 
             if (!compareColor(ncolor, color, 0))
             {
@@ -392,7 +367,6 @@
         {
             byteIndex = (bytesPerRow * roundf(y - 1)) + roundf(x) * bytesPerPixel;
             color = getColorCode(byteIndex, imageData);
-            basecolor = getColorCode(byteIndex, imageData1);
 
             if (!compareColor(ncolor, color, 0))
             {
@@ -420,7 +394,6 @@
         {
             byteIndex = (bytesPerRow * roundf(y + 1)) + roundf(x) * bytesPerPixel;
             color = getColorCode(byteIndex, imageData);
-            basecolor = getColorCode(byteIndex, imageData1);
 
             if (!compareColor(ncolor, color, 0))
             {
@@ -447,15 +420,16 @@
     }
     
     //Convert Flood filled image row data back to UIImage object.
-    
+
     CGImageRef newCGImage = CGBitmapContextCreateImage(context);
     self.image = [UIImage imageWithCGImage:newCGImage scale:self.image.scale orientation:UIImageOrientationUp];
+    
     CGImageRelease(newCGImage);
     CGContextRelease(context);
-    CGContextRelease(context1);
-
     free(imageData);
-    free(imageData1);
+
+    
+
 
     
 }
@@ -494,6 +468,8 @@ bool compareColor (unsigned int color1, unsigned int color2, int tolorance)
        diffGreen > tolorance ||
        diffBlue  > tolorance ||
        diffAlpha > tolorance  )
+        
+        
     {
         return false;
     }
@@ -540,44 +516,44 @@ unsigned int getColorCodeFromUIColor(UIColor *color, CGBitmapInfo orderMask)
     
     return ncolor;
 }
-- (UIColor *)colorAtPixel:(CGPoint)point {
-    // Cancel if point is outside image coordinates
-    if (!CGRectContainsPoint(CGRectMake(0.0f, 0.0f, self.image.size.width, self.image.size.height), point)) {
-        return nil;
-    }
-    
-    NSInteger pointX = trunc(point.x);
-    NSInteger pointY = trunc(point.y);
-    CGImageRef cgImage = self.baseimage.CGImage;
-    NSUInteger width = self.baseimage.size.width;
-    NSUInteger height = self.baseimage.size.height;
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    int bytesPerPixel = 4;
-    int bytesPerRow = bytesPerPixel * 1;
-    NSUInteger bitsPerComponent = 8;
-    unsigned char pixelData[4] = { 0, 0, 0, 0 };
-    CGContextRef context = CGBitmapContextCreate(pixelData,
-                                                 1,
-                                                 1,
-                                                 bitsPerComponent,
-                                                 bytesPerRow,
-                                                 colorSpace,
-                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-    CGColorSpaceRelease(colorSpace);
-    CGContextSetBlendMode(context, kCGBlendModeCopy);
-    
-    // Draw the pixel we are interested in onto the bitmap context
-    CGContextTranslateCTM(context, -pointX, pointY-(CGFloat)height);
-    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, (CGFloat)width, (CGFloat)height), cgImage);
-    CGContextRelease(context);
-    
-    // Convert color values [0..255] to floats [0.0..1.0]
-    CGFloat red   = (CGFloat)pixelData[0] / 255.0f;
-    CGFloat green = (CGFloat)pixelData[1] / 255.0f;
-    CGFloat blue  = (CGFloat)pixelData[2] / 255.0f;
-    CGFloat alpha = (CGFloat)pixelData[3] / 255.0f;
-    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
-}
+//- (UIColor *)colorAtPixel:(CGPoint)point {
+//    // Cancel if point is outside image coordinates
+//    if (!CGRectContainsPoint(CGRectMake(0.0f, 0.0f, self.image.size.width, self.image.size.height), point)) {
+//        return nil;
+//    }
+//    
+//    NSInteger pointX = trunc(point.x);
+//    NSInteger pointY = trunc(point.y);
+//    CGImageRef cgImage = self.baseimage.CGImage;
+//    NSUInteger width = self.baseimage.size.width;
+//    NSUInteger height = self.baseimage.size.height;
+//    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+//    int bytesPerPixel = 4;
+//    int bytesPerRow = bytesPerPixel * 1;
+//    NSUInteger bitsPerComponent = 8;
+//    unsigned char pixelData[4] = { 0, 0, 0, 0 };
+//    CGContextRef context = CGBitmapContextCreate(pixelData,
+//                                                 1,
+//                                                 1,
+//                                                 bitsPerComponent,
+//                                                 bytesPerRow,
+//                                                 colorSpace,
+//                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+//    CGColorSpaceRelease(colorSpace);
+//    CGContextSetBlendMode(context, kCGBlendModeCopy);
+//    
+//    // Draw the pixel we are interested in onto the bitmap context
+//    CGContextTranslateCTM(context, -pointX, pointY-(CGFloat)height);
+//    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, (CGFloat)width, (CGFloat)height), cgImage);
+//    CGContextRelease(context);
+//    
+//    // Convert color values [0..255] to floats [0.0..1.0]
+//    CGFloat red   = (CGFloat)pixelData[0] / 255.0f;
+//    CGFloat green = (CGFloat)pixelData[1] / 255.0f;
+//    CGFloat blue  = (CGFloat)pixelData[2] / 255.0f;
+//    CGFloat alpha = (CGFloat)pixelData[3] / 255.0f;
+//    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+//}
 -(void)setNewcolor:(UIColor *)newcolor
 {
     _newcolor = newcolor;
