@@ -8,7 +8,7 @@
 //
 
 #import "UIImageView+MyWebiamge.h"
-
+#import "NSString+Common.h"
 @implementation UIImageView (MyWebiamge)
 -(void)my_setImageWithURL:(NSURL*)url completed:(completed)block;
 {
@@ -29,9 +29,9 @@
 
     }else {
         
-        [self sd_setImageWithURL:url completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-            block(image,error);
-        }];
+//        [self sd_setImageWithURL:url completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//            block(image,error);
+//        }];
     }
     
 }

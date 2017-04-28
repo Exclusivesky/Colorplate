@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D04EF5B1E8A0A640087B1E5 /* ss.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D04EF5A1E8A0A640087B1E5 /* ss.png */; };
-		0D04EF5F1E8A0B3D0087B1E5 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D04EF5D1E8A0B3D0087B1E5 /* 1.png */; };
-		0D04EF631E8A0C450087B1E5 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D04EF621E8A0C450087B1E5 /* 9.png */; };
-		0D04EF651E8A0E220087B1E5 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D04EF641E8A0E220087B1E5 /* 12.png */; };
 		0D0DBF1B1E88B6D0007031A3 /* UIImage+pixels.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0DBF1A1E88B6D0007031A3 /* UIImage+pixels.m */; };
 		0D2075391E851E09002199E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2075381E851E09002199E9 /* main.m */; };
 		0D20753C1E851E09002199E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D20753B1E851E09002199E9 /* AppDelegate.m */; };
@@ -18,9 +14,16 @@
 		0D2075441E851E09002199E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D2075431E851E09002199E9 /* Assets.xcassets */; };
 		0D2075521E851E09002199E9 /* TextHuaTuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2075511E851E09002199E9 /* TextHuaTuTests.m */; };
 		0D20755D1E851E09002199E9 /* TextHuaTuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D20755C1E851E09002199E9 /* TextHuaTuUITests.m */; };
-		0D20756C1E851F77002199E9 /* MyimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D20756B1E851F77002199E9 /* MyimageView.m */; };
-		0D20756F1E8520CC002199E9 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D20756D1E8520CC002199E9 /* star.png */; };
 		0D4EC83C1E8922E000453D8D /* LinkedListStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4EC83B1E8922E000453D8D /* LinkedListStack.m */; };
+		0DD040291EB2EBBB002CE927 /* UIImageView+MyWebiamge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD040281EB2EBBB002CE927 /* UIImageView+MyWebiamge.m */; };
+		0DD0402C1EB2EBE9002CE927 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0402B1EB2EBE9002CE927 /* NSString+Common.m */; };
+		0DD040311EB2EEF3002CE927 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0DD0402E1EB2EEF3002CE927 /* SVProgressHUD.bundle */; };
+		0DD040321EB2EEF3002CE927 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD040301EB2EEF3002CE927 /* SVProgressHUD.m */; };
+		0DD040341EB2F152002CE927 /* beast_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DD040331EB2F152002CE927 /* beast_1.png */; };
+		0DD040371EB2F356002CE927 /* MyimageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD040361EB2F356002CE927 /* MyimageView.m */; };
+		774B5CEB55EDF10A805F92F8 /* libPods-TextHuaTuUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B75E9CD690695C3012CC922E /* libPods-TextHuaTuUITests.a */; };
+		C7D559CEBFB383F42038DC94 /* libPods-TextHuaTuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A31B4FC0EFA97CB7851EFB8 /* libPods-TextHuaTuTests.a */; };
+		FFBC1428EDEEE036719A9F02 /* libPods-TextHuaTu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4E06E54BBD8220E4E78077 /* libPods-TextHuaTu.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D04EF5A1E8A0A640087B1E5 /* ss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss.png; sourceTree = "<group>"; };
-		0D04EF5D1E8A0B3D0087B1E5 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		0D04EF621E8A0C450087B1E5 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
-		0D04EF641E8A0E220087B1E5 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		0A31B4FC0EFA97CB7851EFB8 /* libPods-TextHuaTuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextHuaTuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0DBF191E88B6D0007031A3 /* UIImage+pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+pixels.h"; sourceTree = "<group>"; };
 		0D0DBF1A1E88B6D0007031A3 /* UIImage+pixels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+pixels.m"; sourceTree = "<group>"; };
 		0D2075341E851E09002199E9 /* TextHuaTu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextHuaTu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,11 +61,26 @@
 		0D2075581E851E09002199E9 /* TextHuaTuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextHuaTuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D20755C1E851E09002199E9 /* TextHuaTuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextHuaTuUITests.m; sourceTree = "<group>"; };
 		0D20755E1E851E09002199E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D20756A1E851F77002199E9 /* MyimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyimageView.h; sourceTree = "<group>"; };
-		0D20756B1E851F77002199E9 /* MyimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyimageView.m; sourceTree = "<group>"; };
-		0D20756D1E8520CC002199E9 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		0D4EC83A1E8922E000453D8D /* LinkedListStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedListStack.h; sourceTree = "<group>"; };
 		0D4EC83B1E8922E000453D8D /* LinkedListStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListStack.m; sourceTree = "<group>"; };
+		0DD040271EB2EBBB002CE927 /* UIImageView+MyWebiamge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MyWebiamge.h"; sourceTree = "<group>"; };
+		0DD040281EB2EBBB002CE927 /* UIImageView+MyWebiamge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MyWebiamge.m"; sourceTree = "<group>"; };
+		0DD0402A1EB2EBE9002CE927 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		0DD0402B1EB2EBE9002CE927 /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
+		0DD0402E1EB2EEF3002CE927 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		0DD0402F1EB2EEF3002CE927 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		0DD040301EB2EEF3002CE927 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		0DD040331EB2F152002CE927 /* beast_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beast_1.png; sourceTree = "<group>"; };
+		0DD040351EB2F356002CE927 /* MyimageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyimageView.h; sourceTree = "<group>"; };
+		0DD040361EB2F356002CE927 /* MyimageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyimageView.m; sourceTree = "<group>"; };
+		477CC9E1FD5766C7B578633B /* Pods-TextHuaTuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextHuaTuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextHuaTuTests/Pods-TextHuaTuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AB7063FB196523D187DA23C /* Pods-TextHuaTuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextHuaTuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextHuaTuUITests/Pods-TextHuaTuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		674CF724C64015DD868ED7B8 /* Pods-TextHuaTu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextHuaTu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextHuaTu/Pods-TextHuaTu.debug.xcconfig"; sourceTree = "<group>"; };
+		84DBD29CED3183984B803E5F /* Pods-TextHuaTuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextHuaTuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextHuaTuTests/Pods-TextHuaTuTests.release.xcconfig"; sourceTree = "<group>"; };
+		85330010AF2A2E5F1C9F00CF /* Pods-TextHuaTu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextHuaTu.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextHuaTu/Pods-TextHuaTu.release.xcconfig"; sourceTree = "<group>"; };
+		B75E9CD690695C3012CC922E /* libPods-TextHuaTuUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextHuaTuUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4E06E54BBD8220E4E78077 /* libPods-TextHuaTu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextHuaTu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DB8DB425D40540797F5692 /* Pods-TextHuaTuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextHuaTuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextHuaTuUITests/Pods-TextHuaTuUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBC1428EDEEE036719A9F02 /* libPods-TextHuaTu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D559CEBFB383F42038DC94 /* libPods-TextHuaTuTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				774B5CEB55EDF10A805F92F8 /* libPods-TextHuaTuUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +114,17 @@
 		0D20752B1E851E09002199E9 = {
 			isa = PBXGroup;
 			children = (
+				0DD0402D1EB2EEF3002CE927 /* SVProgressHUD */,
+				0DD040271EB2EBBB002CE927 /* UIImageView+MyWebiamge.h */,
+				0DD040281EB2EBBB002CE927 /* UIImageView+MyWebiamge.m */,
+				0DD0402A1EB2EBE9002CE927 /* NSString+Common.h */,
+				0DD0402B1EB2EBE9002CE927 /* NSString+Common.m */,
 				0D2075361E851E09002199E9 /* TextHuaTu */,
 				0D2075501E851E09002199E9 /* TextHuaTuTests */,
 				0D20755B1E851E09002199E9 /* TextHuaTuUITests */,
 				0D2075351E851E09002199E9 /* Products */,
+				1333289E77E98D482A9F22E3 /* Pods */,
+				302AAC94A26F38EC0FDA656E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,17 +145,12 @@
 				0D20753B1E851E09002199E9 /* AppDelegate.m */,
 				0D20753D1E851E09002199E9 /* ViewController.h */,
 				0D20753E1E851E09002199E9 /* ViewController.m */,
-				0D20756A1E851F77002199E9 /* MyimageView.h */,
-				0D20756B1E851F77002199E9 /* MyimageView.m */,
+				0DD040351EB2F356002CE927 /* MyimageView.h */,
+				0DD040361EB2F356002CE927 /* MyimageView.m */,
 				0D4EC83A1E8922E000453D8D /* LinkedListStack.h */,
 				0D4EC83B1E8922E000453D8D /* LinkedListStack.m */,
 				0D0DBF191E88B6D0007031A3 /* UIImage+pixels.h */,
 				0D0DBF1A1E88B6D0007031A3 /* UIImage+pixels.m */,
-				0D04EF621E8A0C450087B1E5 /* 9.png */,
-				0D20756D1E8520CC002199E9 /* star.png */,
-				0D04EF5A1E8A0A640087B1E5 /* ss.png */,
-				0D04EF641E8A0E220087B1E5 /* 12.png */,
-				0D04EF5D1E8A0B3D0087B1E5 /* 1.png */,
 				0D2075431E851E09002199E9 /* Assets.xcassets */,
 				0D2075481E851E09002199E9 /* Info.plist */,
 				0D2075371E851E09002199E9 /* Supporting Files */,
@@ -164,6 +184,40 @@
 			path = TextHuaTuUITests;
 			sourceTree = "<group>";
 		};
+		0DD0402D1EB2EEF3002CE927 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0DD040331EB2F152002CE927 /* beast_1.png */,
+				0DD0402E1EB2EEF3002CE927 /* SVProgressHUD.bundle */,
+				0DD0402F1EB2EEF3002CE927 /* SVProgressHUD.h */,
+				0DD040301EB2EEF3002CE927 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		1333289E77E98D482A9F22E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				674CF724C64015DD868ED7B8 /* Pods-TextHuaTu.debug.xcconfig */,
+				85330010AF2A2E5F1C9F00CF /* Pods-TextHuaTu.release.xcconfig */,
+				477CC9E1FD5766C7B578633B /* Pods-TextHuaTuTests.debug.xcconfig */,
+				84DBD29CED3183984B803E5F /* Pods-TextHuaTuTests.release.xcconfig */,
+				4AB7063FB196523D187DA23C /* Pods-TextHuaTuUITests.debug.xcconfig */,
+				F1DB8DB425D40540797F5692 /* Pods-TextHuaTuUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		302AAC94A26F38EC0FDA656E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE4E06E54BBD8220E4E78077 /* libPods-TextHuaTu.a */,
+				0A31B4FC0EFA97CB7851EFB8 /* libPods-TextHuaTuTests.a */,
+				B75E9CD690695C3012CC922E /* libPods-TextHuaTuUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D2075611E851E09002199E9 /* Build configuration list for PBXNativeTarget "TextHuaTu" */;
 			buildPhases = (
+				EE90904CB6D29D2EC8E7E2DE /* [CP] Check Pods Manifest.lock */,
 				0D2075301E851E09002199E9 /* Sources */,
 				0D2075311E851E09002199E9 /* Frameworks */,
 				0D2075321E851E09002199E9 /* Resources */,
+				D8D6A3FED039DA79A80FAA8E /* [CP] Embed Pods Frameworks */,
+				B64A020F81AD106BEE482BEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D2075641E851E09002199E9 /* Build configuration list for PBXNativeTarget "TextHuaTuTests" */;
 			buildPhases = (
+				3EDA71B20B45C0D469668EDA /* [CP] Check Pods Manifest.lock */,
 				0D2075491E851E09002199E9 /* Sources */,
 				0D20754A1E851E09002199E9 /* Frameworks */,
 				0D20754B1E851E09002199E9 /* Resources */,
+				8871D7508049F087449BF7E9 /* [CP] Embed Pods Frameworks */,
+				0AA48EB29F1EE16647C90F00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D2075671E851E09002199E9 /* Build configuration list for PBXNativeTarget "TextHuaTuUITests" */;
 			buildPhases = (
+				2F5ECAE672EB2E2A7EABF744 /* [CP] Check Pods Manifest.lock */,
 				0D2075541E851E09002199E9 /* Sources */,
 				0D2075551E851E09002199E9 /* Frameworks */,
 				0D2075561E851E09002199E9 /* Resources */,
+				E49A0AF3BD08EC1130ED3309 /* [CP] Embed Pods Frameworks */,
+				65985FFD18501324ECB9D6D5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,12 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D04EF651E8A0E220087B1E5 /* 12.png in Resources */,
+				0DD040311EB2EEF3002CE927 /* SVProgressHUD.bundle in Resources */,
 				0D2075441E851E09002199E9 /* Assets.xcassets in Resources */,
-				0D04EF631E8A0C450087B1E5 /* 9.png in Resources */,
-				0D20756F1E8520CC002199E9 /* star.png in Resources */,
-				0D04EF5F1E8A0B3D0087B1E5 /* 1.png in Resources */,
-				0D04EF5B1E8A0A640087B1E5 /* ss.png in Resources */,
+				0DD040341EB2F152002CE927 /* beast_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,14 +355,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AA48EB29F1EE16647C90F00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextHuaTuTests/Pods-TextHuaTuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F5ECAE672EB2E2A7EABF744 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3EDA71B20B45C0D469668EDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		65985FFD18501324ECB9D6D5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextHuaTuUITests/Pods-TextHuaTuUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8871D7508049F087449BF7E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextHuaTuTests/Pods-TextHuaTuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B64A020F81AD106BEE482BEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextHuaTu/Pods-TextHuaTu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8D6A3FED039DA79A80FAA8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextHuaTu/Pods-TextHuaTu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E49A0AF3BD08EC1130ED3309 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextHuaTuUITests/Pods-TextHuaTuUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE90904CB6D29D2EC8E7E2DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D2075301E851E09002199E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD040371EB2F356002CE927 /* MyimageView.m in Sources */,
+				0DD0402C1EB2EBE9002CE927 /* NSString+Common.m in Sources */,
+				0DD040291EB2EBBB002CE927 /* UIImageView+MyWebiamge.m in Sources */,
 				0D0DBF1B1E88B6D0007031A3 /* UIImage+pixels.m in Sources */,
 				0D4EC83C1E8922E000453D8D /* LinkedListStack.m in Sources */,
-				0D20756C1E851F77002199E9 /* MyimageView.m in Sources */,
+				0DD040321EB2EEF3002CE927 /* SVProgressHUD.m in Sources */,
 				0D20753F1E851E09002199E9 /* ViewController.m in Sources */,
 				0D20753C1E851E09002199E9 /* AppDelegate.m in Sources */,
 				0D2075391E851E09002199E9 /* main.m in Sources */,
@@ -433,6 +634,7 @@
 		};
 		0D2075621E851E09002199E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 674CF724C64015DD868ED7B8 /* Pods-TextHuaTu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TextHuaTu/Info.plist;
@@ -444,6 +646,7 @@
 		};
 		0D2075631E851E09002199E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85330010AF2A2E5F1C9F00CF /* Pods-TextHuaTu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TextHuaTu/Info.plist;
@@ -455,6 +658,7 @@
 		};
 		0D2075651E851E09002199E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 477CC9E1FD5766C7B578633B /* Pods-TextHuaTuTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TextHuaTuTests/Info.plist;
@@ -467,6 +671,7 @@
 		};
 		0D2075661E851E09002199E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84DBD29CED3183984B803E5F /* Pods-TextHuaTuTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TextHuaTuTests/Info.plist;
@@ -479,6 +684,7 @@
 		};
 		0D2075681E851E09002199E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB7063FB196523D187DA23C /* Pods-TextHuaTuUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TextHuaTuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -490,6 +696,7 @@
 		};
 		0D2075691E851E09002199E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1DB8DB425D40540797F5692 /* Pods-TextHuaTuUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TextHuaTuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

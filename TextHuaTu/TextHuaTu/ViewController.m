@@ -1,128 +1,221 @@
 //
-//  ViewController.m
-//  TextHuaTu
+//  PictureViewController.m
+//  This colour
 //
-//  Created by 赵红亮 on 2017/3/24.
-//  Copyright © 2017年 赵红亮. All rights reserved.
+//  Created by 韩一博 on 2017/3/31.
+//  Copyright © 2017年 韩一博. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "SDAutoLayout.h"
 #import "MyimageView.h"
-
-
-@interface ViewController ()
-
-
+#import "UIImageView+MyWebiamge.h"
+#import "SVProgressHUD.h"
+#import "NSString+Common.h"
+@interface ViewController ()<UIScrollViewDelegate>
+@property (nonatomic, strong)UIButton *shapeButton;//返回
+@property (nonatomic, strong)UIButton *keepButton;//保存
+@property (nonatomic, strong)UIButton *shareButton;//分享
+@property (nonatomic, strong)UIButton *revokeButton;//撤销
 @property (nonatomic,strong) MyimageView *myimageview;
 
-
+@property (nonatomic,strong)UIScrollView * scrollView;
 @end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self setNav];
+    [self stUI];
+    
+}
+
+
+-(void)stUI
+{
+    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
     self.view.backgroundColor = [UIColor whiteColor];
+    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 100, screenW, screenW)];
+    //_scrollView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_scrollView];
+    self.myimageview = [[MyimageView alloc]initWithFrame:CGRectMake(0, 0, screenW, screenW)];
+    //self.myimageview.contentMode = UIViewContentModeScaleAspectFit;
+    [self.scrollView addSubview:self.myimageview];
+    //设置内容大小
+    _scrollView.contentSize = _myimageview.frame.size;
+    //设置代理为控制器
+    _scrollView.delegate = self;
+    //设置最小缩放比例
+    _scrollView.minimumZoomScale = 1;
+    //设置最大缩放比例
+    _scrollView.maximumZoomScale = 4;
+    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTapGesture:)];
+    //设置手势点击数,双击：点2下
+    tapGesture.numberOfTapsRequired=2;
+    //    self.imageView.userInteractionEnabled = YES;
+    [_scrollView addGestureRecognizer:tapGesture];
     
-    self.myimageview = [[MyimageView alloc]initWithFrame:CGRectMake(0, 100, 588/2, 330/2)];
-    [self.view addSubview:self.myimageview];
-    self.myimageview.image = [UIImage imageNamed:@"12"];
-    self.myimageview.baseimage = [UIImage imageNamed:@"12"];
-    self.myimageview.newcolor = [UIColor redColor];
-
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button.frame = CGRectMake(10, 400, 20, 30);
-    button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(red) forControlEvents:(UIControlEventTouchUpInside)];
-
-    
-    
-    UIButton *button1 = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button1.frame = CGRectMake(40, 400, 20, 30);
-    button1.backgroundColor = [UIColor greenColor];
-    [button1 addTarget:self action:@selector(green) forControlEvents:(UIControlEventTouchUpInside)];
-    
-    UIButton *button11 = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button11.frame = CGRectMake(70, 400, 20, 30);
-    button11.backgroundColor = [UIColor blackColor];
-    [button11 addTarget:self action:@selector(black) forControlEvents:(UIControlEventTouchUpInside)];
-    
-    
-    UIButton *button111 = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button111.frame = CGRectMake(100, 400, 20, 30);
-    button111.backgroundColor = [UIColor blueColor];
-    [button111 addTarget:self action:@selector(blue) forControlEvents:(UIControlEventTouchUpInside)];
+    NSString *urlstr = [[NSString stringWithFormat:@"%@",@"besta1"] md5Str];
+    //拿到图片
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [NSString stringWithFormat:@"%@/%@.png",paths[0],urlstr];
+    NSLog(@"imagepath=============%@",path);
     
     
-    UIButton *button1111 = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button1111.frame = CGRectMake(130, 400, 20, 30);
-    button1111.backgroundColor = [UIColor orangeColor];
-    [button1111 addTarget:self action:@selector(orange) forControlEvents:(UIControlEventTouchUpInside)];
+    //设置一个图片的存储路径
+    // 拿到沙盒路径图片
+    UIImage *imgFromUrl3=[[UIImage alloc]initWithContentsOfFile:path];
+    if (imgFromUrl3) {
+        self.myimageview.image  = imgFromUrl3;
+        
+    }else {
+        self.myimageview.image = [UIImage imageNamed:@"beast_1"];
+    }
+    
+        CGFloat sc =  (screenW/self.myimageview.image.size.width);
+        self.myimageview.frame = CGRectMake(0, 0, screenW, self.myimageview.image.size.height * sc);
+        self.myimageview.scaleNum = 1/sc;
+        self.myimageview.newcolor = [UIColor redColor];
     
     
-    UIButton *button11111 = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button11111.frame = CGRectMake(160, 400, 20, 30);
-    button11111.backgroundColor = [UIColor yellowColor];
-    [button11111 addTarget:self action:@selector(yellow) forControlEvents:(UIControlEventTouchUpInside)];
+    NSArray *colorarray = @[[UIColor blackColor],[UIColor redColor ],[UIColor greenColor],[UIColor yellowColor],[UIColor brownColor],[UIColor blueColor],[UIColor grayColor]];
+    CGFloat  buttonjianju = ([UIScreen mainScreen].bounds.size.width - 20 * colorarray.count)/(colorarray.count +1);
     
     
-    UIButton *button111111 = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    button111111.frame = CGRectMake(190, 400, 20, 30);
-    button111111.backgroundColor = [UIColor purpleColor];
-    [button111111 addTarget:self action:@selector(purple) forControlEvents:(UIControlEventTouchUpInside)];
+    for (int a = 0;  a < colorarray.count;  a ++) {
+        UIColor *color = colorarray[a];
+        UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        button.frame = CGRectMake(buttonjianju + a *(20 + buttonjianju), [UIScreen mainScreen].bounds.size.height - 20 - 100, 20, 30);
+        button.backgroundColor = color;
+        [button addTarget:self action:@selector(action:) forControlEvents:(UIControlEventTouchUpInside)];
+        [self.view addSubview:button];
+        button.showsTouchWhenHighlighted=YES;
+        
+    }
     
-    
-
-    
-    
-    [self.view addSubview:button];
-    [self.view addSubview:button1];
-    [self.view addSubview:button11];
-    [self.view addSubview:button111];
-    [self.view addSubview:button1111];
-    [self.view addSubview:button11111];
-    [self.view addSubview:button11111];
-    [self.view addSubview:button111111];
-
 }
--(void)purple
+//放大缩小
+-(void)handleTapGesture:(UIGestureRecognizer*)sender
 {
-    self.myimageview.newcolor = [UIColor purpleColor];
-
+    if(_scrollView.zoomScale > 1.0){
+        [_scrollView setZoomScale:1.0 animated:YES];
+    }else{
+        [_scrollView setZoomScale:4.0 animated:YES];
+    }
 }
--(void)yellow
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-    self.myimageview.newcolor = [UIColor yellowColor];
-
+    
+    return _myimageview;
 }
--(void)orange
-{
-    self.myimageview.newcolor = [UIColor orangeColor];
 
-}
--(void)blue
-{
-    self.myimageview.newcolor = [UIColor blueColor];
 
-}
--(void)black
+- (void)setNav
 {
-    self.myimageview.newcolor = [UIColor blackColor];
-
+    
+    
+    
+    //返回
+    self.shapeButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.shapeButton.sd_layout.heightIs(24).widthIs(24);
+    [self.shapeButton setImage:[UIImage imageNamed:@"Shape"] forState:UIControlStateNormal];
+    [self.shapeButton addTarget:self action:@selector(shapeButtonBarButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
+    //保存
+    self.keepButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.keepButton.sd_layout.heightIs(24).widthIs(24);
+    [self.keepButton setImage:[UIImage imageNamed:@"保存"] forState:UIControlStateNormal];
+    [self.keepButton addTarget:self action:@selector(keepButtonBarButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
+    //分享
+    self.shareButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.shareButton.sd_layout.heightIs(24).widthIs(24);
+    [self.shareButton setImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
+    [self.shareButton addTarget:self action:@selector(shareButtonBarButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
+    //撤销
+    self.revokeButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.revokeButton.sd_layout.heightIs(24).widthIs(24);
+    [self.revokeButton setImage:[UIImage imageNamed:@"撤销"] forState:UIControlStateNormal];
+    [self.revokeButton addTarget:self action:@selector(revokeButtonBarButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]   initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace   target:nil action:nil];
+    
+    /**
+     width为负数时，相当于btn向右移动width数值个像素，由于按钮本身和  边界间距为5pix，所以width设为-5时，间距正好调整为0；width为正数 时，正好相反，相当于往左移动width数值个像素
+     */
+    negativeSpacer.width = 50;
+    self.navigationItem.leftBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:_shapeButton],negativeSpacer,[[UIBarButtonItem alloc] initWithCustomView:_keepButton],negativeSpacer,[[UIBarButtonItem alloc] initWithCustomView:_shareButton],negativeSpacer,[[UIBarButtonItem alloc] initWithCustomView:_revokeButton]];
 }
--(void)green
+// 返回
+- (void)shapeButtonBarButtonAction
 {
-    self.myimageview.newcolor = [UIColor greenColor];
-
-}
--(void)red
-{
-    self.myimageview.newcolor = [UIColor redColor];
+    [self.navigationController popViewControllerAnimated:YES];
+    [self.myimageview saveImage:self.myimageview.image with:@"besta1"];
+    
     
 }
+// 保存 到相册
+- (void)loadImageFinished:(UIImage *)image
+{
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+}
+// 保存到相册回调方法
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    
+    NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
+    
+    [SVProgressHUD showSuccessWithStatus:@"Success"];
+    
+}
+
+// 保存到相册按钮
+- (void)keepButtonBarButtonAction
+{
+    
+    UIAlertController *ale = [UIAlertController alertControllerWithTitle:@"提示" message:@"保存到相册" preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self loadImageFinished:self.myimageview.image];
+        
+    }];
+    UIAlertAction *cancelAction1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    
+    [ale addAction:cancelAction];
+    [ale addAction:cancelAction1];
+    
+    [self presentViewController:ale animated:YES completion:nil];
+    
+    
+    
+    
+    
+}
+// 分享按钮
+- (void)shareButtonBarButtonAction
+{
+    
+}
+// 撤销 按钮
+- (void)revokeButtonBarButtonAction
+{
+    
+    self.myimageview .image = [UIImage imageNamed:@"beast_1"];
+    
+    
+    
+}
+// 颜色的选择button的
+-(void)action:(UIButton*)button
+{
+    self.myimageview.newcolor = button.backgroundColor;
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

@@ -14,7 +14,6 @@
 
 #import "MyimageView.h"
 #import "LinkedListStack.h"
-#import "AFNetworkSessionClient.h"
 @interface MyimageView()
 @property (nonatomic,assign) CGImageRef cgimage;
 

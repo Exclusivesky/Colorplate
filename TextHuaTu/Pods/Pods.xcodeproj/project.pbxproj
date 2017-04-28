@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A4F1DBDD5F27795B60EC6FFF7D8A65B /* SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 071B3B78097765A076025B93048C6B09 /* SDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17E4CADFCE0B8A6974D1F1F732ADFE2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		1955F322E3F22170C74817787CB66C28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		2C76FCFBB8E92D82BA305872B01EB559 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		39882B39C4304ABBFF9102B9D2425D9C /* Pods-TextHuaTuTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AADEF18D81BF1419369F0F54ACFAB7 /* Pods-TextHuaTuTests-dummy.m */; };
+		6B00D7C9951999DF22B44C6ADA1F96BE /* UIView+SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 29CE405B8A0EB1C5C35D1AAD7F6C414E /* UIView+SDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79ECD2433B8BB464A854E9BBDACAF8DC /* UITableView+SDAutoTableViewCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E461F2C1503F17685F06D54AE040EA /* UITableView+SDAutoTableViewCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A284588A3CCFC792B8452E4E3EC7615 /* SDAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CE1B828749E6B19601F32D1897F272 /* SDAutoLayout-dummy.m */; };
+		9BFA58583104696D1E31C6D31933AD44 /* Pods-TextHuaTuUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E5231A0FF838DB95F5EF1F207BB7B /* Pods-TextHuaTuUITests-dummy.m */; };
+		AA5B7076A5A553BF992449101E3322D9 /* Pods-TextHuaTu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE420DB0C4CC0CDB58F97D1E85EAABAE /* Pods-TextHuaTu-dummy.m */; };
+		B1AC03812498241DF8776929DAB385E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		D4782EEF6CF83C420CA0AB939D711C72 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = C3104270020ED4A1CFFE19DC9641F896 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		F3385BC6F1024F537C4732231A9021C9 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C2CB4C834DE21DC8BC04FA8A811CF2 /* UIView+SDAutoLayout.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D884DC311428A462729F33EB5CE5C630 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C017A39878BBE77324E17ED763039C5;
+			remoteInfo = SDAutoLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00343D0CD8B705484DC4D1B4713BEAA7 /* Pods-TextHuaTuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextHuaTuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		00B2D13DD0FADB7F412F64278DC16A1C /* Pods-TextHuaTuTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TextHuaTuTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		071B3B78097765A076025B93048C6B09 /* SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAutoLayout.h; path = SDAutoLayoutDemo/SDAutoLayout/SDAutoLayout.h; sourceTree = "<group>"; };
+		08C2CB4C834DE21DC8BC04FA8A811CF2 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDAutoLayout.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		15180441D637491C28661C50EF83022B /* Pods-TextHuaTu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextHuaTu.debug.xcconfig"; sourceTree = "<group>"; };
+		18903AE0D3EF826503790F8EC24E2C65 /* Pods-TextHuaTuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextHuaTuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23F97F7C82675134E4630C04D02B06D5 /* Pods-TextHuaTuUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TextHuaTuUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		270E5B8DAA7DA4298CAAA512FB286440 /* Pods-TextHuaTuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextHuaTuTests.release.xcconfig"; sourceTree = "<group>"; };
+		29CE405B8A0EB1C5C35D1AAD7F6C414E /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SDAutoLayout.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		39AADEF18D81BF1419369F0F54ACFAB7 /* Pods-TextHuaTuTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TextHuaTuTests-dummy.m"; sourceTree = "<group>"; };
+		40F9A53B50442CC09E0E7C483B06817F /* Pods-TextHuaTuUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TextHuaTuUITests-resources.sh"; sourceTree = "<group>"; };
+		4A8A681C511FD1C33D30D70E3B630436 /* Pods-TextHuaTuTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TextHuaTuTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		544DF98F97AE9C94FB9EF29DDFC2842F /* Pods-TextHuaTuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextHuaTuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5582A33A94DA79586169BF36E2A94F80 /* Pods-TextHuaTuTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TextHuaTuTests-frameworks.sh"; sourceTree = "<group>"; };
+		57C51271C79E2DA8345D2D3258549336 /* Pods-TextHuaTuUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TextHuaTuUITests-frameworks.sh"; sourceTree = "<group>"; };
+		61CD5414D0CD584E688B86A350634113 /* Pods-TextHuaTuTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TextHuaTuTests-resources.sh"; sourceTree = "<group>"; };
+		677A62BB6A4DC4B1C0C32A0E084D484E /* libPods-TextHuaTuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TextHuaTuTests.a"; path = "libPods-TextHuaTuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B485AD7554469091705816790D2737 /* Pods-TextHuaTu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextHuaTu.release.xcconfig"; sourceTree = "<group>"; };
+		782383A07DAB659D8A735B88891CAF69 /* libPods-TextHuaTu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TextHuaTu.a"; path = "libPods-TextHuaTu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E461F2C1503F17685F06D54AE040EA /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+SDAutoTableViewCellHeight.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F7FD2AEBF3D58B551A34C55F1EA041 /* SDAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		963B162A403117ED673BB67EE35ACFF5 /* Pods-TextHuaTuUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TextHuaTuUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9F19F547EB6AEF2BDC8B21697FAEB9A0 /* libPods-TextHuaTuUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TextHuaTuUITests.a"; path = "libPods-TextHuaTuUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8E5231A0FF838DB95F5EF1F207BB7B /* Pods-TextHuaTuUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TextHuaTuUITests-dummy.m"; sourceTree = "<group>"; };
+		AE420DB0C4CC0CDB58F97D1E85EAABAE /* Pods-TextHuaTu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TextHuaTu-dummy.m"; sourceTree = "<group>"; };
+		B000FB768CFA540C6E28E1782C9F85B3 /* Pods-TextHuaTu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TextHuaTu-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B38E96B759775966E99217C415FBEADB /* Pods-TextHuaTu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TextHuaTu-acknowledgements.plist"; sourceTree = "<group>"; };
+		C3104270020ED4A1CFFE19DC9641F896 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SDAutoTableViewCellHeight.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		C94C4161A203E88554061C688364D50F /* libSDAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDAutoLayout.a; path = libSDAutoLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E20F24E4BE7A3BF3E0D58B3E29DED305 /* Pods-TextHuaTu-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TextHuaTu-frameworks.sh"; sourceTree = "<group>"; };
+		F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDAutoLayout.xcconfig; sourceTree = "<group>"; };
+		F8CE1B828749E6B19601F32D1897F272 /* SDAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		FB2CD6B9CD53A3C723EF6B01FE2D2D0B /* Pods-TextHuaTu-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TextHuaTu-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48ECCC190FE7A3F7121578A8FA8B0E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E4CADFCE0B8A6974D1F1F732ADFE2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6157D5C1734F69E5B85A6BD5D2949A8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1955F322E3F22170C74817787CB66C28 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8149613B9F7811494B7BCDDF8B1C4395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C76FCFBB8E92D82BA305872B01EB559 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7B50E3F054A2A75536C7CEDD8439B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AC03812498241DF8776929DAB385E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0466132F06DFBE10CDC0AF8AEC8D54B2 /* Pods-TextHuaTuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				23F97F7C82675134E4630C04D02B06D5 /* Pods-TextHuaTuUITests-acknowledgements.markdown */,
+				963B162A403117ED673BB67EE35ACFF5 /* Pods-TextHuaTuUITests-acknowledgements.plist */,
+				9F8E5231A0FF838DB95F5EF1F207BB7B /* Pods-TextHuaTuUITests-dummy.m */,
+				57C51271C79E2DA8345D2D3258549336 /* Pods-TextHuaTuUITests-frameworks.sh */,
+				40F9A53B50442CC09E0E7C483B06817F /* Pods-TextHuaTuUITests-resources.sh */,
+				544DF98F97AE9C94FB9EF29DDFC2842F /* Pods-TextHuaTuUITests.debug.xcconfig */,
+				00343D0CD8B705484DC4D1B4713BEAA7 /* Pods-TextHuaTuUITests.release.xcconfig */,
+			);
+			name = "Pods-TextHuaTuUITests";
+			path = "Target Support Files/Pods-TextHuaTuUITests";
+			sourceTree = "<group>";
+		};
+		3FE72E44B5F1CB12FDE70C26CC46B0F9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */,
+				F8CE1B828749E6B19601F32D1897F272 /* SDAutoLayout-dummy.m */,
+				94F7FD2AEBF3D58B551A34C55F1EA041 /* SDAutoLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDAutoLayout";
+			sourceTree = "<group>";
+		};
+		44B259612DCF08B380F3C01D4F818D8F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B49FC84FC00968137EA317F3DB88A8D7 /* Pods-TextHuaTu */,
+				A52C346D312BE64BD5D35B9A5F80FAC7 /* Pods-TextHuaTuTests */,
+				0466132F06DFBE10CDC0AF8AEC8D54B2 /* Pods-TextHuaTuUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		641965D67593C806D301D2B7DB3AD690 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				071B3B78097765A076025B93048C6B09 /* SDAutoLayout.h */,
+				82E461F2C1503F17685F06D54AE040EA /* UITableView+SDAutoTableViewCellHeight.h */,
+				C3104270020ED4A1CFFE19DC9641F896 /* UITableView+SDAutoTableViewCellHeight.m */,
+				29CE405B8A0EB1C5C35D1AAD7F6C414E /* UIView+SDAutoLayout.h */,
+				08C2CB4C834DE21DC8BC04FA8A811CF2 /* UIView+SDAutoLayout.m */,
+				3FE72E44B5F1CB12FDE70C26CC46B0F9 /* Support Files */,
+			);
+			name = SDAutoLayout;
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				ABCDF8479A0506B3345CF7B496FE2F2D /* Pods */,
+				BA94ABBDB362D154B8A1AA8EA4D79599 /* Products */,
+				44B259612DCF08B380F3C01D4F818D8F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A52C346D312BE64BD5D35B9A5F80FAC7 /* Pods-TextHuaTuTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A8A681C511FD1C33D30D70E3B630436 /* Pods-TextHuaTuTests-acknowledgements.markdown */,
+				00B2D13DD0FADB7F412F64278DC16A1C /* Pods-TextHuaTuTests-acknowledgements.plist */,
+				39AADEF18D81BF1419369F0F54ACFAB7 /* Pods-TextHuaTuTests-dummy.m */,
+				5582A33A94DA79586169BF36E2A94F80 /* Pods-TextHuaTuTests-frameworks.sh */,
+				61CD5414D0CD584E688B86A350634113 /* Pods-TextHuaTuTests-resources.sh */,
+				18903AE0D3EF826503790F8EC24E2C65 /* Pods-TextHuaTuTests.debug.xcconfig */,
+				270E5B8DAA7DA4298CAAA512FB286440 /* Pods-TextHuaTuTests.release.xcconfig */,
+			);
+			name = "Pods-TextHuaTuTests";
+			path = "Target Support Files/Pods-TextHuaTuTests";
+			sourceTree = "<group>";
+		};
+		ABCDF8479A0506B3345CF7B496FE2F2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				641965D67593C806D301D2B7DB3AD690 /* SDAutoLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B49FC84FC00968137EA317F3DB88A8D7 /* Pods-TextHuaTu */ = {
+			isa = PBXGroup;
+			children = (
+				B000FB768CFA540C6E28E1782C9F85B3 /* Pods-TextHuaTu-acknowledgements.markdown */,
+				B38E96B759775966E99217C415FBEADB /* Pods-TextHuaTu-acknowledgements.plist */,
+				AE420DB0C4CC0CDB58F97D1E85EAABAE /* Pods-TextHuaTu-dummy.m */,
+				E20F24E4BE7A3BF3E0D58B3E29DED305 /* Pods-TextHuaTu-frameworks.sh */,
+				FB2CD6B9CD53A3C723EF6B01FE2D2D0B /* Pods-TextHuaTu-resources.sh */,
+				15180441D637491C28661C50EF83022B /* Pods-TextHuaTu.debug.xcconfig */,
+				67B485AD7554469091705816790D2737 /* Pods-TextHuaTu.release.xcconfig */,
+			);
+			name = "Pods-TextHuaTu";
+			path = "Target Support Files/Pods-TextHuaTu";
+			sourceTree = "<group>";
+		};
+		BA94ABBDB362D154B8A1AA8EA4D79599 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				782383A07DAB659D8A735B88891CAF69 /* libPods-TextHuaTu.a */,
+				677A62BB6A4DC4B1C0C32A0E084D484E /* libPods-TextHuaTuTests.a */,
+				9F19F547EB6AEF2BDC8B21697FAEB9A0 /* libPods-TextHuaTuUITests.a */,
+				C94C4161A203E88554061C688364D50F /* libSDAutoLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A236794227C8DA3A5DAF0A19086AE6F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A4F1DBDD5F27795B60EC6FFF7D8A65B /* SDAutoLayout.h in Headers */,
+				79ECD2433B8BB464A854E9BBDACAF8DC /* UITableView+SDAutoTableViewCellHeight.h in Headers */,
+				6B00D7C9951999DF22B44C6ADA1F96BE /* UIView+SDAutoLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		20E765161722CD441C2BD8CF31F1941C /* Pods-TextHuaTu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 934A6A325E8453A7DD8CE02C27041B3A /* Build configuration list for PBXNativeTarget "Pods-TextHuaTu" */;
+			buildPhases = (
+				52CCE27E8324282D793FF3649D4DC946 /* Sources */,
+				F7B50E3F054A2A75536C7CEDD8439B5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8D1E11C8B5909A3199E92FF0D41F69F /* PBXTargetDependency */,
+			);
+			name = "Pods-TextHuaTu";
+			productName = "Pods-TextHuaTu";
+			productReference = 782383A07DAB659D8A735B88891CAF69 /* libPods-TextHuaTu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3C017A39878BBE77324E17ED763039C5 /* SDAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 615CD9F4307ADC9386316882324569B0 /* Build configuration list for PBXNativeTarget "SDAutoLayout" */;
+			buildPhases = (
+				E0441909D4D883B28486F75ED6A325E8 /* Sources */,
+				6157D5C1734F69E5B85A6BD5D2949A8C /* Frameworks */,
+				A236794227C8DA3A5DAF0A19086AE6F8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDAutoLayout;
+			productName = SDAutoLayout;
+			productReference = C94C4161A203E88554061C688364D50F /* libSDAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		575C38E045853819766F3BA700E44C24 /* Pods-TextHuaTuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43ABBE9723731F2D095BFCB7F4E95B23 /* Build configuration list for PBXNativeTarget "Pods-TextHuaTuUITests" */;
+			buildPhases = (
+				2C982CEBADB4247A60B0DF60817A3667 /* Sources */,
+				48ECCC190FE7A3F7121578A8FA8B0E9C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TextHuaTuUITests";
+			productName = "Pods-TextHuaTuUITests";
+			productReference = 9F19F547EB6AEF2BDC8B21697FAEB9A0 /* libPods-TextHuaTuUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6EA531AC79B30FC6355D1B3A137FD98C /* Pods-TextHuaTuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E4D600E204B23401756AFB61B47D3FA /* Build configuration list for PBXNativeTarget "Pods-TextHuaTuTests" */;
+			buildPhases = (
+				13F26BEF4E0022BAD90542A53F1B98FF /* Sources */,
+				8149613B9F7811494B7BCDDF8B1C4395 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TextHuaTuTests";
+			productName = "Pods-TextHuaTuTests";
+			productReference = 677A62BB6A4DC4B1C0C32A0E084D484E /* libPods-TextHuaTuTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BA94ABBDB362D154B8A1AA8EA4D79599 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20E765161722CD441C2BD8CF31F1941C /* Pods-TextHuaTu */,
+				6EA531AC79B30FC6355D1B3A137FD98C /* Pods-TextHuaTuTests */,
+				575C38E045853819766F3BA700E44C24 /* Pods-TextHuaTuUITests */,
+				3C017A39878BBE77324E17ED763039C5 /* SDAutoLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13F26BEF4E0022BAD90542A53F1B98FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39882B39C4304ABBFF9102B9D2425D9C /* Pods-TextHuaTuTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C982CEBADB4247A60B0DF60817A3667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFA58583104696D1E31C6D31933AD44 /* Pods-TextHuaTuUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CCE27E8324282D793FF3649D4DC946 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5B7076A5A553BF992449101E3322D9 /* Pods-TextHuaTu-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0441909D4D883B28486F75ED6A325E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A284588A3CCFC792B8452E4E3EC7615 /* SDAutoLayout-dummy.m in Sources */,
+				D4782EEF6CF83C420CA0AB939D711C72 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				F3385BC6F1024F537C4732231A9021C9 /* UIView+SDAutoLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8D1E11C8B5909A3199E92FF0D41F69F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDAutoLayout;
+			target = 3C017A39878BBE77324E17ED763039C5 /* SDAutoLayout */;
+			targetProxy = D884DC311428A462729F33EB5CE5C630 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17CB5B7400FE5A979A67A460E70C89AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15180441D637491C28661C50EF83022B /* Pods-TextHuaTu.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		474C304B274D7DF58E5A4D9C18E108ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00343D0CD8B705484DC4D1B4713BEAA7 /* Pods-TextHuaTuUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5455DFD2130ABACC5F0425702B19105F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDAutoLayout/SDAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		722D1CAF3BB9D4A4D8C425CC5CFC336F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F390125CBD545AF4AB9C5151E3E8236F /* SDAutoLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDAutoLayout/SDAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		937379F27218F5A068F2F2383BB09916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67B485AD7554469091705816790D2737 /* Pods-TextHuaTu.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		ABE6AE0EC16524C234F2540F92A0B4C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270E5B8DAA7DA4298CAAA512FB286440 /* Pods-TextHuaTuTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D2F2888E989642CE6AAD7491C4DB08B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18903AE0D3EF826503790F8EC24E2C65 /* Pods-TextHuaTuTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E653CBBD591FEE13634E1224CA553F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544DF98F97AE9C94FB9EF29DDFC2842F /* Pods-TextHuaTuUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43ABBE9723731F2D095BFCB7F4E95B23 /* Build configuration list for PBXNativeTarget "Pods-TextHuaTuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E653CBBD591FEE13634E1224CA553F24 /* Debug */,
+				474C304B274D7DF58E5A4D9C18E108ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E4D600E204B23401756AFB61B47D3FA /* Build configuration list for PBXNativeTarget "Pods-TextHuaTuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F2888E989642CE6AAD7491C4DB08B6 /* Debug */,
+				ABE6AE0EC16524C234F2540F92A0B4C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		615CD9F4307ADC9386316882324569B0 /* Build configuration list for PBXNativeTarget "SDAutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5455DFD2130ABACC5F0425702B19105F /* Debug */,
+				722D1CAF3BB9D4A4D8C425CC5CFC336F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		934A6A325E8453A7DD8CE02C27041B3A /* Build configuration list for PBXNativeTarget "Pods-TextHuaTu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17CB5B7400FE5A979A67A460E70C89AA /* Debug */,
+				937379F27218F5A068F2F2383BB09916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
